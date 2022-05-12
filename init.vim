@@ -2,46 +2,26 @@
 " - For Neovim: stdpath('data') . '/plugged'
 " - Avoid using standard Vim directory names like 'plugin'
 set number relativenumber
+"Plugins
 call plug#begin('~/.config/nvim/plugged')
 
-Plug 'morhetz/gruvbox'
-Plug 'neoclide/coc.nvim', {'branch': 'release'}
-Plug 'preservim/nerdtree', {'branch': 'release'}
-Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
-Plug 'mbbill/undotree'
+Plug 'morhetz/gruvbox' " Color theme
+Plug 'neoclide/coc.nvim', {'branch': 'release'} "Completion
+Plug 'preservim/nerdtree', {'branch': 'release'} "File manager
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } } "Fuzzy finder
+Plug 'mbbill/undotree' "Undo history
 
 " Html plugins
-Plug 'mattn/emmet-vim'
-Plug 'alvan/vim-closetag'
-Plug 'tpope/vim-surround'
-Plug 'jelera/vim-javascript-syntax'
-Plug 'moll/vim-node'
-Plug 'heavenshell/vim-jsdoc'
-Plug 'pangloss/vim-javascript'
-Plug 'tpope/vim-repeat'
-Plug 'jackguo380/vim-lsp-cxx-highlight'
-Plug 'cdelledonne/vim-cmake'
-Plug 'richq/vim-cmake-completion'
-
-"Plug 'jpalardy/vim-slime', { 'for': 'python' }
-
-" Make sure you use single quotes
-
-" Shorthand notation; fetches https://github.com/junegunn/vim-easy-align
-
-" Any valid git URL is allowed
-
-" Multiple Plug commands can be written in a single line using | separators
-
-" On-demand loading
-
-" Using a non-default branch
-
-" Using a tagged rlease; wildcard allowed (requires git 1.9.2 or above)
-" Plugin options
-" Plugin outside ~/.vim/plugged with post-update hook
-
-" Unmanaged plugin (manually installed and updated)
+Plug 'mattn/emmet-vim' "Html plugin for fast tag writing,plug-in which provides support for expanding abbreviations similar to emmet.
+Plug 'alvan/vim-closetag' "Helps to close html tag
+Plug 'tpope/vim-surround' "surround quickly words with symbol or tag
+Plug 'jelera/vim-javascript-syntax' "Javascript syntax highlighting
+Plug 'moll/vim-node' "For node.js developemnt
+Plug 'heavenshell/vim-jsdoc' "Generates documentation lines for javascript
+Plug 'pangloss/vim-javascript' "provides syntax highlighting and improved indentation for javascipt
+Plug 'tpope/vim-repeat' "Repeat.vim remaps . in a way that plugins can tap into it.
+Plug 'jackguo380/vim-lsp-cxx-highlight' "plugin that provides C/C++/Cuda/ObjC semantic highlighting using the language server protocol
+Plug 'cdelledonne/vim-cmake' "plugin for building CMake projects inside of Vim/Neovim, with a nice visual feedback.
 
 " Initialize plugin system
 call plug#end()
